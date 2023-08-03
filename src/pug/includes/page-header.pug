@@ -1,10 +1,18 @@
-header.page-header
-  h1.page-header__heading Проведение ТО и мелкий ремонт
+header.page-body__header.page-header
   nav.page-header__navigation
+    a.page-header__logo-link(href="#no_scroll")
+      img.page-header__logo(src="img/page-header/logo.svg" width="269" height="55" alt="Company logo.")
+    button.page-header__button(type="button" aria-label="Open menu.")
     ul.page-header__list
       li.page-header__item
-        a.page-header__link(href="#no_scroll") Общее
+        a.page-header__link(href="#no_scroll") À la carte
       li.page-header__item
-        a.page-header__link.page-header__link--active(href="#no_scroll") Товар списания
+        a.page-header__link(href="#no_scroll") Wijnkaart
       li.page-header__item
-        a.page-header__link(href="#no_scroll") Доп. расходы
+        a.page-header__link(href="#no_scroll") Lunchmenu
+      li.page-header__item
+        a.page-header__link(href="#no_scroll") Contact
+    a.page-header__link(href="tel:+3292825725")
+      svg.page-header__phone
+        use(href="img/icons/sprite.svg#phone-calling")
+      span +32 9 282 57 25

@@ -2,6 +2,11 @@
 :root {
   --white: #{$white};
   --black: #{$black};
+  --calico: #{$calico};
+  --light-gray: #{$light-gray};
+  --purple: #{$purple};
+  --hero-gradient: #{$hero-gradient};
+  --dark-purple: #{$dark-purple};
 }
 
 *,
@@ -17,7 +22,12 @@ html {
 }
 
 a {
+  display: block;
   text-decoration: none;
+}
+
+svg {
+  vertical-align: middle;
 }
 
 ul, ol {

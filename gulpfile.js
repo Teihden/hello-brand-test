@@ -7,6 +7,8 @@ import stylelint from '@ronilaukkarinen/gulp-stylelint';
 import pug from 'gulp-pug';
 import pugLinter from 'gulp-pug-linter';
 import htmlMin from 'gulp-html-minifier-terser';
+import imageMin from 'gulp-imagemin';
+import webp from 'gulp-webp';
 import svgSprite from 'gulp-svg-sprite';
 import { deleteAsync } from 'del';
 import browserSync from 'browser-sync';
@@ -98,6 +100,25 @@ function optimizeJS() {
     .pipe(browser.stream());
 }
 
+// Images
+function optimizeImages() {
+  return gulp.src(['src/img/**/*.{png,jpg}', 'src/apple-touch-icon.png'], {
+    since: gulp.lastRun(imageMin),
+    base: 'src',
+  })
+    .pipe(imageMin())
+    .pipe(gulp.dest('build'))
+    .pipe(browser.stream());
+}
+
+function createWebp() {
+  return gulp.src(['src/img/**/*.{png,jpg}'], {
+    base: 'src',
+  })
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest('build'));
+}
+
 // SVG
 function makeSprite() {
   return gulp.src([
@@ -124,22 +145,20 @@ function copyImages() {
     .pipe(gulp.dest('build/img'));
 }
 
-function copyMisc(cb) {
-  gulp.src([
+function copyFonts() {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('build/fonts/'))
+    .pipe(browser.stream());
+}
+
+function copyMisc() {
+  return gulp.src([
     'src/favicon.ico',
     'src/site.webmanifest',
     'src/apple-touch-icon.png',
   ])
-    .pipe(gulp.dest('build/'));
-
-  gulp.src(['src/vendor/**/*.min.{css,js}'])
-    .pipe(gulp.dest('build/vendor/'));
-
-  gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('build/fonts/'))
+    .pipe(gulp.dest('build/'))
     .pipe(browser.stream());
-
-  cb();
 }
 
 // Clean
@@ -162,15 +181,13 @@ function browsersync() {
 function watcher(cb) {
   gulp.watch('src/pug/**/*.pug', gulp.series(lintPug, compilePug));
   gulp.watch('src/scss/**/*.scss', gulp.series(lintSass, compileScss));
-  gulp.watch(
-    [
-      'src/favicon.ico',
-      'src/manifest.webmanifest',
-      'src/fonts/**/*.{woff,woff2}',
-      'src/vendor',
-    ],
-    copyMisc,
-  );
+  gulp.watch([
+    'src/img/**/*.{png,jpg,svg}',
+    '!src/img/icons/*.svg',
+    'src/apple-touch-icon.png',
+  ], copyImages);
+  gulp.watch(['src/favicon.ico', 'src/manifest.webmanifest'], copyMisc);
+  gulp.watch('src/fonts/**/*.{woff,woff2}', copyFonts);
   gulp.watch('src/js/**/*.js', gulp.series(lintJS, optimizeJS));
 
   cb();
@@ -190,8 +207,10 @@ export const build = gulp.series(
     gulp.series(lintPug, compilePug, optimizeHTML),
     gulp.series(lintSass, compileScss, postCSS),
     gulp.series(lintJS, optimizeJS),
-    copyImages,
+    copyFonts,
     copyMisc,
+    optimizeImages,
+    createWebp,
     makeSprite,
   ),
 );
@@ -204,7 +223,9 @@ export default gulp.series(
     gulp.series(lintSass, compileScss),
     gulp.series(lintJS, optimizeJS),
     copyImages,
+    copyFonts,
     copyMisc,
+    createWebp,
     makeSprite,
   ),
   gulp.series(

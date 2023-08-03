@@ -1,0 +1,31 @@
+.button {
+  width: 270px;
+  min-height: 100px;
+  padding: 38px 0;
+  background-color: var(--purple);
+  text-align: center;
+
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--dark-purple);
+    animation: pulse 0.8s 0s ease-in-out 1;
+
+  }
+
+  &:active {
+    background-color: var(--purple);
+    color: color.adjust($white, $alpha: -0.6);
+  }
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 8px 6px var(--purple), 0 0 12px 14px var(--purple); }
+  to {
+    box-shadow: 0 0 18px 6px color.adjust($purple, $alpha: -1), 0 0 4px 45px color.adjust($purple, $alpha: -1); } }

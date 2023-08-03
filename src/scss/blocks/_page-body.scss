@@ -1,39 +1,25 @@
 .page-body {
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   min-width: $min-container-width;
-  min-width: 100%;
   min-height: 100%;
   margin: 0;
-  padding: 16px 10px;
 
-  background-color: var(--mist);
+  background-color: var(--white);
   color: var(--black);
 
   font-weight: 400;
   font-size: 16px;
-  font-family: MyriadPro, Arial, sans-serif;
-  line-height: 16px;
+  font-family: Poppins, Arial, sans-serif;
+  line-height: 24px;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-
-    width: 0;
-
-    background: $gradient;
-
-    transition: width 0.3s linear;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 25px;
-  }
-
-  @media (min-width: $desktop-width) {
-    &::before {
-      width: 229px;
-    }
-  }
+.page-body__header {
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 55px;
+  z-index: 10;
 }

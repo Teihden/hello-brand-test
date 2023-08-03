@@ -1,5 +1,5 @@
 {
-  "name": "opt6-test",
+  "name": "hello-brand-test",
   "version": "1.0.0",
   "description": "Frontend test assignment",
   "scripts": {
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Teihden/opt6-test.git"
+    "url": "git+https://github.com/Teihden/hello-brand-test.git"
   },
   "editorconfig-cli": [
     "*.json",
@@ -31,9 +31,9 @@
   "author": "Teihden",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Teihden/opt6-test/issues"
+    "url": "https://github.com/Teihden/hello-brand-test/issues"
   },
-  "homepage": "https://github.com/Teihden/opt6-test#readme",
+  "homepage": "https://github.com/Teihden/hello-brand-test#readme",
   "devDependencies": {
     "@ifanrx/stylelint-config-standard-bem": "^1.1.0",
     "@ronilaukkarinen/gulp-stylelint": "^14.1.1",
@@ -46,6 +46,7 @@
     "gulp": "^4.0.2",
     "gulp-eslint-new": "^1.8.2",
     "gulp-html-minifier-terser": "^7.1.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-pug": "^5.0.0",
     "gulp-pug-linter": "^1.5.0",
@@ -65,5 +66,8 @@
     "stylelint-config-standard-scss": "^10.0.0",
     "stylelint-order": "^6.0.3"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "gulp-webp": "^4.0.1"
+  }
 }
