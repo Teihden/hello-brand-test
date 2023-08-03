@@ -3,6 +3,7 @@ $white: #ffffff;
 $black: #000000;
 $calico: #d3b47f;
 $light-gray: #d3d3d3;
+$gray: #808080;
 $purple: #3A4574;
 $dark-purple: #2d3559;
 $whisper: #e7e7e7;
@@ -15,6 +16,7 @@ $hero-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.51) 0%, rgba(0, 0, 0, 0.51
 // $box-shadow-button: 0 0 3px 0 #000, inset 0 1px 2px 0 rgb(255 255 255 / 50%);
 
 // Widths
+$max-container-width: 1230px;
 $min-container-width: 360px;
 
 // Breakpoints

@@ -1,37 +1,41 @@
 section.menu
-  .menu__container
+  .menu__container.container
     h2.visually-hidden Week Menu
     ul.menu__list
       li.menu__item
-        h2.menu-subheading Woensdag 12/01
+        h3.menu-subheading Woensdag 12/01
         span.menu-text Salade met Serrano
         svg.menu__multipoint
           use(href="img/icons/sprite.svg#multipoint")
         span.menu-text Steak Tartaar
       li.menu__item
-        h2.menu-subheading Donderdag 13/01
+        h3.menu-subheading Donderdag 13/01
         span.menu-text Toast Roquefort
         svg.menu__multipoint
           use(href="img/icons/sprite.svg#multipoint")
         span.menu-text Penne met Kip en Prei
       li.menu__item
-        h2.menu-subheading Vrijdag 14/01
+        h3.menu-subheading Vrijdag 14/01
         span.menu-text Verrassing van de Chef
         svg.menu__multipoint
           use(href="img/icons/sprite.svg#multipoint")
         span.menu-text Penne met Kip en Prei
       li.menu__item
-        h2.menu-subheading Vrijdag 15/01
+        h3.menu-subheading Vrijdag 15/01
         span.menu-text Verrassing van de Chef
         svg.menu__multipoint
           use(href="img/icons/sprite.svg#multipoint")
         span.menu-text Penne met Kip en Prei
       li.menu__item
-        h2.menu-subheading Vrijdag 16/01
+        h3.menu-subheading Vrijdag 16/01
         span.menu-text Verrassing van de Chef
         svg.menu__multipoint
           use(href="img/icons/sprite.svg#multipoint")
         span.menu-text Penne met Kip en Prei
     .menu__photos
-      img.menu__photo.menu__photo--bottom(src="img/menu/interior-1.jpg" width="323" height="486" alt="Interior-1.")
-      img.menu__photo.menu__photo--top(src="img/menu/interior-2.jpg" width="323" height="486" alt="Interior-2.")
+      picture.menu__picture
+        source(type="image/webp" srcset="img/menu/interior-1@1x.webp 1x, img/menu/interior-1@2x.webp 2x" width="323" height="486")
+        img.menu__photo.menu__photo--bottom(src="img/menu/interior-1@1x.jpg" srcset="img/menu/interior-1@2x.jpg" width="323" height="486" loading="lazy" alt="Interior-1.")
+      picture.menu__picture
+        source(type="image/webp" srcset="img/menu/interior-2@1x.webp 1x, img/menu/interior-2@2x.webp 2x" width="323" height="486")
+        img.menu__photo.menu__photo--top(src="img/menu/interior-2@1x.jpg" srcset="img/menu/interior-2@2x.jpg" width="323" height="486" loading="lazy" alt="Interior-2.")

@@ -1,4 +1,4 @@
-# Hello, brand!. Frontend test assignment. 
+# Hello, brand! Frontend test assignment. 
 [![CI](https://github.com/Teihden/hello-brand-test/actions/workflows/CI.yml/badge.svg)](https://github.com/Teihden/hello-brand-test/actions/workflows/CI.yml)
 [![Github Pages](https://github.com/Teihden/hello-brand-test/actions/workflows/github-pages-with-gulp.yml/badge.svg)](https://github.com/Teihden/hello-brand-test/actions/workflows/github-pages-with-gulp.yml)
 
