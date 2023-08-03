@@ -7,6 +7,7 @@
   --purple: #{$purple};
   --hero-gradient: #{$hero-gradient};
   --dark-purple: #{$dark-purple};
+  --whisper: #{$whisper};
 }
 
 *,
@@ -46,6 +47,7 @@ button {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 
 .visually-hidden {
