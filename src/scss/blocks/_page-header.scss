@@ -1,0 +1,68 @@
+.page-header {
+  margin: 0 0 25px;
+  transition: margin 0.3s linear;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 229px;
+  }
+}
+
+.page-header__heading {
+  width: 300px;
+  margin: 0 0 25px;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 31px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.page-header__list {
+  @include default-list;
+
+  display: flex;
+  gap: 0 20px;
+  margin: 0 0 26px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 25px;
+  }
+}
+
+.page-header__link {
+  color: var(--light-navy);
+  font-weight: 600;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--active {
+    color: var(--black);
+    cursor: default;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+}
