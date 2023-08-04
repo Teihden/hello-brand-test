@@ -11,49 +11,18 @@
 .feedback__button {
   position: absolute;
   top: 351px;
-  width: 70px;
-  height: 70px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  transition-property: color, opacity, transform;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.3s;
-  color: var(--white);
 
-  &:hover {
-    color: var(--calico);
-  }
-
-  &:active {
-    color: var(--calico);
-    opacity: 0.4;
-  }
-
-  &--left {
+  &--prev {
     left: 30px;
-
-    &:hover {
-      transform: translateX(-10px);
-    }
   }
 
-  &--right {
+  &--next {
     right: 30px;
-    transform: rotateY(180deg);
-
-    &:hover {
-      transform: rotateY(180deg) translateX(-10px);
-    }
   }
 }
 
-.feedback__arrow {
-  width: 70px;
-  height: 70px;
-}
 
-.slider-container {
+.feedback__slider-container {
   max-width: 780px;
   overflow: hidden;
   margin: 0 auto;

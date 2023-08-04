@@ -1,13 +1,13 @@
 section.feedback
   .feedback__container.container
     h2.visually-hidden Feedback
-    button.feedback__button.feedback__button--left(type="button")
-      svg.feedback__arrow
+    button.feedback__button.feedback__button--prev.arrow-button.arrow-button--prev(type="button")
+      svg.arrow-button__icon
         use(href="img/icons/sprite.svg#arrow")
-    button.feedback__button.feedback__button--right(type="button")
-      svg.feedback__arrow
+    button.feedback__button.feedback__button--next.arrow-button.arrow-button--next(type="button")
+      svg.arrow-button__icon
         use(href="img/icons/sprite.svg#arrow")
-    .slider-container
+    .feedback__slider-container
       ol.feedback__list
         li.feedback__item
           blockquote.feedback__blockquote

@@ -1,0 +1,46 @@
+.arrow-button {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition-property: color, opacity, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+
+  &--prev {
+    color: var(--white);
+
+    &:hover {
+      color: var(--calico);
+      transform: translateX(-10px);
+    }
+
+    &:active {
+      color: var(--calico);
+      opacity: 0.4;
+    }
+  }
+
+  &--next {
+    color: var(--calico);
+    transform: rotateY(180deg);
+
+    &:hover {
+      color: var(--white);
+      transform: rotateY(180deg) translateX(-10px);
+    }
+
+    &:active {
+      color: var(--white);
+      opacity: 0.4;
+    }
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+

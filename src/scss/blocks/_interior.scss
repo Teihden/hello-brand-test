@@ -1,0 +1,52 @@
+.interior {
+  color: var(--white);
+  background: linear-gradient(var(--purple), var(--purple)) no-repeat left -303px;
+}
+
+.interior__container {
+  padding-top: 68px;
+  margin: 0 auto;
+}
+
+.interior__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 50px 0;
+}
+
+.interior__header {
+   max-width: 490px;
+}
+
+.interior__heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 88px;
+  margin: 0;
+}
+
+.interior__text {
+  font-size: 16px;
+  line-height: 32px;
+  margin: -8px 0 0 0;
+}
+
+.interior__button-container {
+  display: flex;
+  column-gap: 30px;
+  margin: 37px 0 0 0;
+}
+
+.interior__slider-container {
+  max-width: 970px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.interior__list {
+  display: flex;
+}
+
+.interior__item {
+  min-width: 100%;
+}
