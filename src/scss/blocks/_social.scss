@@ -1,0 +1,41 @@
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 25px;
+  max-width: 534px;
+}
+
+.social__icon {
+  width: 48px;
+  height: 48px;
+}
+
+.social__link {
+  color: inherit;
+  transition:
+    color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+
+  &:hover {
+    outline: none;
+    color: var(--calico);
+    transform: scale(1.2) translateY(10px);
+  }
+
+  &:focus {
+    outline: none;
+    color: var(--calico);
+    transform: scale(1.2) translateY(10px);
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: var(--calico);
+    transform: scale(1.2) translateY(10px);
+  }
+
+  &:active {
+    color: var(--calico);
+    opacity: 0.6;
+  }
+}

@@ -12,8 +12,20 @@
     color: var(--white);
 
     &:hover {
+      outline: none;
       color: var(--calico);
       transform: translateX(-10px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--calico);
+      color: var(--calico);
+      transform: translateX(-10px);
+      border-radius: 35px;
     }
 
     &:active {
@@ -27,8 +39,20 @@
     transform: rotateY(180deg);
 
     &:hover {
+      outline: none;
       color: var(--white);
       transform: rotateY(180deg) translateX(-10px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--white);
+      color: var(--white);
+      transform: rotateY(180deg) translateX(-10px);
+      border-radius: 35px;
     }
 
     &:active {

@@ -1,0 +1,45 @@
+section.contacts
+  .contacts__container.container
+    .contacts__list-wrapper
+      h2.contacts__heading.contacts__heading--contacts Contacts
+      ul.contacts__list
+        li.contacts__item
+          svg.contacts__icon
+            use(href="img/icons/sprite.svg#phone")
+          h3.contacts__subheading Phone Number
+          a.contacts__link(href="tel:+3292825725") +32 9 282 57 25
+        li.contacts__item
+          svg.contacts__icon
+            use(href="img/icons/sprite.svg#email")
+          h3.contacts__subheading Email
+          a.contacts__link(href="mailto:info@email.com") info@email.com
+        li.contacts__item
+          svg.contacts__icon
+            use(href="img/icons/sprite.svg#clock")
+          h3.contacts__subheading Opening Hours
+          .contacts__text Everyday from 6 AM - 9 PM
+        li.contacts__item.contacts__item--map
+          svg.contacts__icon
+            use(href="img/icons/sprite.svg#map")
+          h3.contacts__subheading Map Street
+          .contacts__text Jl. Raya Surabaya 2787
+    .contacts__form-wrapper
+      p.contacts__heading.contacts__heading--questions have any questions?
+      form.contacts__form.form(action="" method="POST" autocomplete="off")
+        ul.form__list
+          li.form__item.form__item--name
+            label.form__label(for="contacts-name") Name
+            input.form__input#contacts-name(type="text" name="contacts_name" placeholder="Input your name")
+          li.form__item.form__item--email
+            label.form__label(for="contacts-email") Email
+            input.form__input#contacts-email(type="email" name="contacts_email" placeholder="Input your email")
+          li.form__item.form__item--request
+            label.form__label(for="form-request") Speciale Request
+            textarea.form__input.form__input--textarea#form-request(name="contacts_request" placeholder="Input your special request")
+        button.form__submit.block-button(type="submit") Send
+    .contacts__map-wrapper
+      noscript
+        picture.contacts__map-picture
+          source(type="image/webp" srcset="img/contacts/map@1x.webp 1x, img/contacts/map@2x.webp 2x" width="1170" height="547")
+          img.contacts__map-image(src="img/contacts/map@1x.png" srcset="img/contacts/map@2x.png" width="1170" height="547" loading="lazy" alt="Map.")
+      iframe.contacts__map-frame(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d80369.08800972626!2d3.6826539!3d50.9878036!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c36d86000a0d65%3A0x7535eb12a3ad34f9!2sHooglatemweg%202%2C%209830%20Sint-Martens-Latem%2C%20Belgium!5e0!3m2!1sen!2sen!4v1691151492950!5m2!1sen!2sen" allowfullscreen="fullscreen" referrerpolicy="no-referrer-when-downgrade" loading="lazy" title="Bistro map location.")

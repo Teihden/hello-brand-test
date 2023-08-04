@@ -6,16 +6,23 @@
   text-align: center;
 
   color: var(--white);
-  font-size: 18px;
   font-weight: 500;
   line-height: 24px;
 
   transition: background-color 0.3s ease-in-out;
 
   &:hover {
+    outline: none;
     background-color: var(--dark-purple);
     animation: pulse 0.8s 0s ease-in-out 1;
+  }
 
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--calico);
   }
 
   &:active {

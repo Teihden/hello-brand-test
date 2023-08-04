@@ -2,7 +2,7 @@
   position: relative;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  min-width: $min-container-width;
+  min-width: var(--min-container-width);
   min-height: 100%;
   margin: 0;
 

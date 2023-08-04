@@ -2,13 +2,16 @@
 :root {
   --white: #{$white};
   --black: #{$black};
+  --dark: #{$dark};
   --calico: #{$calico};
   --light-gray: #{$light-gray};
+  --silver: #{$silver};
   --gray: #{$gray};
   --purple: #{$purple};
   --hero-gradient: #{$hero-gradient};
   --dark-purple: #{$dark-purple};
   --whisper: #{$whisper};
+  --min-container-width: #{$min-container-width};
   --max-container-width: #{$max-container-width};
 }
 
