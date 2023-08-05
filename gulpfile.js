@@ -8,6 +8,7 @@ import pug from 'gulp-pug';
 import pugLinter from 'gulp-pug-linter';
 import htmlMin from 'gulp-html-minifier-terser';
 import imageMin from 'gulp-imagemin';
+import svgMin from 'gulp-svgmin';
 import webp from 'gulp-webp';
 import svgSprite from 'gulp-svg-sprite';
 import { deleteAsync } from 'del';
@@ -111,6 +112,15 @@ function optimizeImages() {
     .pipe(browser.stream());
 }
 
+async function optimizeSVG() {
+  gulp.src([
+    'src/img/**/*.svg',
+    '!src/img/icons/*.svg',
+  ])
+    .pipe(svgMin())
+    .pipe(gulp.dest('build/img'));
+}
+
 function createWebp() {
   return gulp.src(['src/img/**/*.{png,jpg}'], {
     base: 'src',
@@ -124,6 +134,7 @@ function makeSprite() {
   return gulp.src([
     'src/img/icons/*.svg',
   ])
+    .pipe(svgMin())
     .pipe(svgSprite({
       mode: {
         symbol: {
@@ -210,6 +221,7 @@ export const build = gulp.series(
     copyFonts,
     copyMisc,
     optimizeImages,
+    optimizeSVG,
     createWebp,
     makeSprite,
   ),

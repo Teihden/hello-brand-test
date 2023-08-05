@@ -16,7 +16,7 @@
   flex-direction: column;
 
   @media (max-width: 470px) {
-    justify-content: start;
+    justify-content: flex-start;
     row-gap: 15px;
   }
 }

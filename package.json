@@ -68,6 +68,7 @@
   },
   "type": "module",
   "dependencies": {
+    "gulp-svgmin": "^4.1.0",
     "gulp-webp": "^4.0.1"
   }
 }
