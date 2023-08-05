@@ -31,6 +31,7 @@
 }
 
 .form__input {
+  appearance: textfield;
   font-family: inherit;
   color: var(--black);
   border: 1px solid var(--silver);
@@ -45,6 +46,14 @@
 
   @media (max-width: 590px) {
     padding: 15px;
+  }
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &::-webkit-outer-spin-button {
+    appearance: none;
   }
 
   &:hover {

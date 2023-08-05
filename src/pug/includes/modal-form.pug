@@ -1,0 +1,27 @@
+section.modal-form
+  .modal-form__inner
+    h2.modal-form__heading Reserve a table
+    button.modal-form__close-button#modal-form-close-button(type="reset" aria-label="Close the form window.")
+      svg.modal-form__cross
+        use(href="img/icons/sprite.svg#cross")
+    form.modal-form__form.form#modal-form(action="https://httpbin.org/post" method="POST" autocomplete="off")
+      ul.form__list.modal-form__list
+        li.form__item.form__item--name.modal-form__item.modal-form__item--name
+          label.form__label(for="modal-form-name") Full Name
+          input.form__input#modal-form-name(type="text" name="modal_form_name" data-label="name" placeholder="Input your name")
+        li.form__item.form__item--phone.modal-form__item.modal-form__item--phone
+          label.form__label(for="modal-form-phone") Phone number
+          input.form__input#modal-form-phone(type="number" name="modal_form_phone" data-label="phone" placeholder="Input your phone number")
+        li.form__item.form__item--email.modal-form__item.modal-form__item--email
+          label.form__label(for="modal-form-email") Email
+          input.form__input#modal-form-email(type="email" name="modal_form_email" data-label="email" placeholder="Input your email")
+        li.form__item.form__item--date.modal-form__item.modal-form__item--date
+          label.form__label(for="modal-form-booking") Date of booking
+          input.form__input#modal-form-date(type="date" name="modal_form_date" value="2023-08-05" data-label="date")
+        li.form__item.form__item--guest.modal-form__item.modal-form__item--guest
+          label.form__label(for="modal-form-guest") Guest numbers
+          input.form__input#modal-form-guest(type="number" name="modal_form_guest" data-label="guest" placeholder="Input your guest numbers")
+        li.form__item.form__item--request.modal-form__item.modal-form__item--request
+          label.form__label(for="modal-form-request") Special Request
+          textarea.form__input.form__input--textarea#modal-form-request(name="modal-form_request" data-label="request" placeholder="Input your special request")
+      button.form__submit.block-button(type="submit") Send
