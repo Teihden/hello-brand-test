@@ -13,6 +13,8 @@
   --min-container-width: #{$min-container-width};
   --max-container-width: #{$max-container-width};
   --form-shadow: #{$form-shadow};
+  --message-success-shadow: #{$message-success-shadow};
+  --message-failure-shadow: #{$message-failure-shadow};
 }
 
 *,

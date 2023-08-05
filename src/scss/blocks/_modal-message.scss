@@ -1,0 +1,72 @@
+.modal-message__inner {
+  position: relative;
+  overflow: auto;
+
+  width: 100%;
+  height: 120px;
+  min-width: var(--min-container-width);
+  max-height: 90vh;
+  padding: 30px;
+  transition: color 0.3s ease-in-out;
+  cursor: default;
+  will-change: color;
+}
+
+.modal-message__text {
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  height: 100%;
+  transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
+
+  @media (max-width: 700px) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.modal-message {
+  display: grid;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  place-items: center;
+  background-color: color.adjust($white, $alpha: -0.1);
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  will-change: opacity;
+
+  &--active {
+    pointer-events: auto;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &--success {
+    .modal-message__inner {
+      background-color: var(--purple);
+      box-shadow: var(--message-success-shadow);
+    }
+
+    .modal-message__text {
+      color: var(--calico);
+    }
+  }
+
+  &--failure {
+    .modal-message__inner {
+      background-color: var(--calico);
+      box-shadow: var(--message-failure-shadow);
+    }
+
+    .modal-message__text {
+      color: var(--white);
+    }
+  }
+}
