@@ -142,14 +142,11 @@
 
   &:focus {
     outline: none;
-    color: var(--calico);
-    transform: translateY(10px);
   }
 
   &:focus-visible {
     outline: none;
-    color: var(--calico);
-    transform: translateY(10px);
+    outline: 1px solid var(--calico);
   }
 
   &:active {

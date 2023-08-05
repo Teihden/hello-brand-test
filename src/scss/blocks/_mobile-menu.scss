@@ -48,11 +48,11 @@
     }
 
     &:focus {
-      transform: scale(1.2) translateY(10px);
+      outline: none;
     }
 
     &:focus-visible {
-      transform: scale(1.2) translateY(10px);
+      outline: 1px solid var(--calico);
     }
   }
 }

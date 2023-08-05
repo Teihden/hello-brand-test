@@ -28,8 +28,6 @@
 
     &:focus-visible {
       outline: 1px solid var(--calico);
-      color: var(--calico);
-      transform: translateX(-10px);
       border-radius: 35px;
     }
 
@@ -55,8 +53,6 @@
 
     &:focus-visible {
       outline: 1px solid var(--white);
-      color: var(--white);
-      transform: rotateY(180deg) translateX(-10px);
       border-radius: 35px;
     }
 

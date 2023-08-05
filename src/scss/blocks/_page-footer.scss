@@ -1,5 +1,6 @@
 .page-footer {
   padding-inline: 30px 33px;
+  margin: 0 0 30px 0;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -24,12 +25,10 @@
 
   &:focus {
     outline: none;
-    opacity: 0.7;
   }
 
   &:focus-visible {
-    outline: none;
-    opacity: 0.7;
+    outline: 1px solid var(--calico);
   }
 
   &:active {

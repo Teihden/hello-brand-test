@@ -24,14 +24,11 @@
 
   &:focus {
     outline: none;
-    color: var(--calico);
-    transform: scale(1.2) translateY(10px);
   }
 
   &:focus-visible {
     outline: none;
     color: var(--calico);
-    transform: scale(1.2) translateY(10px);
   }
 
   &:active {

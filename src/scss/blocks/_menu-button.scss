@@ -40,6 +40,11 @@
   padding: 0;
   border-radius: 50%;
 
+  @media (max-width: 1020px) {
+    display: grid;
+    place-items: center;
+  }
+
   &:hover {
     outline: none;
     border-color: var(--calico);
@@ -81,9 +86,8 @@
     }
   }
 
-  @media (max-width: 1020px) {
-    display: grid;
-    place-items: center;
+  &--inactive {
+    animation: show 0.6s linear;
   }
 }
 
