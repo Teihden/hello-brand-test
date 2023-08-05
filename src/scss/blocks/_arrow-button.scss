@@ -8,6 +8,11 @@
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
 
+  @media (max-width: 700px) {
+    width: 40px;
+    height: 40px;
+  }
+
   &--prev {
     color: var(--white);
 
@@ -64,7 +69,10 @@
   &__icon {
     width: 70px;
     height: 70px;
+
+    @media (max-width: 700px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
-
-

@@ -1,17 +1,49 @@
 .contacts__container {
   margin: 102px auto 40px;
   display: grid;
-  grid-template-columns: 405px minmax(auto, 1fr);
-  gap: 50px 95px;
+  grid-template-columns: max-content minmax(auto, 1fr);
+  gap: 50px 103px;
+
+  @media (max-width: 990px) {
+    margin: 81px 0 40px;
+    gap: 50px;
+  }
+
+  @media (max-width: 910px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 700px) {
+    margin: 64px 0 40px;
+  }
 }
 
 .contacts__heading {
   font-size: 48px;
   font-weight: 700;
   line-height: 88px;
+  white-space: nowrap;
+
+  @media (max-width: 1050px) {
+    font-size: 38px;
+    line-height: 70px;
+  }
+
+  @media (max-width: 910px) {
+    text-align: center;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 30px;
+    line-height: 56px
+  }
 
   &--contacts {
     margin: 0 0 35px 0;
+
+    @media (max-width: 910px) {
+      margin: 0 0 80px 0;
+    }
   }
 
   &--questions {
@@ -24,14 +56,26 @@
   display: flex;
   flex-direction: column;
   row-gap: 40px;
+
+  @media (max-width: 910px) {
+    align-items: center;
+    row-gap: 100px;
+  }
 }
 
 .contacts__item {
   position: relative;
   padding: 0 0 0 80px;
 
+  @media (max-width: 910px) {
+    width: 100%;
+    border-bottom: 1px solid var(--whisper);
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+
   &::before {
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     position: absolute;
@@ -40,6 +84,12 @@
     background-color: var(--calico);
     z-index: 10;
     border-radius: 32px;
+
+    @media (max-width: 910px) {
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &--map {
@@ -55,6 +105,12 @@
   height: 24px;
   color: var(--white);
   z-index: 20;
+
+  @media (max-width: 910px) {
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .contacts__subheading {
@@ -72,6 +128,11 @@
   transition-property: color, opacity, transform;
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
+
+  @media (max-width: 700px) {
+    font-size: 20px;
+    line-height: 26px
+  }
 
   &:hover {
     outline: none;
@@ -101,6 +162,11 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
+
+  @media (max-width: 700px) {
+    font-size: 20px;
+    line-height: 26px
+  }
 }
 
 .contacts__map-wrapper {
@@ -114,13 +180,20 @@
   left: 0;
   width: 100%;
   height: 547px;
+
+  @media (max-width: 920px) {
+    height: 400px;
+  }
 }
 
 .contacts__map-image {
   display: block;
   width: 100%;
-  height: 547px;
   object-fit: cover;
+
+  @media (max-width: 920px) {
+    height: 400px;
+  }
 }
 
 .contacts__map-frame {
@@ -128,4 +201,8 @@
   width: 100%;
   height: 547px;
   border: none;
+
+  @media (max-width: 920px) {
+    height: 400px;
+  }
 }

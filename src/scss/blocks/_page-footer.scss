@@ -7,9 +7,14 @@
   justify-content: space-between;
   color: var(--black);
   gap: 25px 73px;
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+  }
 }
 
 .page-footer__logo-link {
+  flex-shrink: 0;
   transition: opacity 0.3s ease-in-out;
 
   &:hover {
@@ -29,6 +34,10 @@
 
   &:active {
     opacity: 0.4;
+  }
+
+  @media (max-width: 590px) {
+    width: 200px;
   }
 }
 

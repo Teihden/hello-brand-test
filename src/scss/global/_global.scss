@@ -8,7 +8,6 @@
   --silver: #{$silver};
   --gray: #{$gray};
   --purple: #{$purple};
-  --hero-gradient: #{$hero-gradient};
   --dark-purple: #{$dark-purple};
   --whisper: #{$whisper};
   --min-container-width: #{$min-container-width};
@@ -47,6 +46,11 @@ button {
   cursor: pointer;
   user-select: none;
   border: none;
+}
+
+picture {
+  max-width: 100%;
+  height: auto;
 }
 
 img {

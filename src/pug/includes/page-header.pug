@@ -1,18 +1,26 @@
 header.page-body__header.page-header.container
   nav.page-header__navigation
+    button.page-header__button.menu-button(type="button" aria-label="Toogle menu.")
+      span.menu-button__lines
     a.page-header__logo-link(href="#no_scroll")
       img.page-header__logo(src="img/page-header/logo.svg" width="269" height="55" alt="Company logo.")
-    button.page-header__button(type="button" aria-label="Open menu.")
-    ul.page-header__list
-      li.page-header__item
-        a.page-header__link(href="#no_scroll") À la carte
-      li.page-header__item
-        a.page-header__link(href="#no_scroll") Wijnkaart
-      li.page-header__item
-        a.page-header__link(href="#no_scroll") Lunchmenu
-      li.page-header__item
-        a.page-header__link(href="#no_scroll") Contact
-    a.page-header__link(href="tel:+3292825725")
+    .page-header__links.mobile-menu
+      ul.page-header__list.mobile-menu__list
+        li.page-header__item.mobile-menu__item
+          a.page-header__link.mobile-menu__link(href="#no_scroll") À la carte
+        li.page-header__item.mobile-menu__item
+          a.page-header__link.mobile-menu__link(href="#no_scroll") Wijnkaart
+        li.page-header__item.mobile-menu__item
+          a.page-header__link.mobile-menu__link(href="#no_scroll") Lunchmenu
+        li.page-header__item.mobile-menu__item
+          a.page-header__link.mobile-menu__link(href="#contact") Contact
+      .page-header__wrapper.mobile-menu__wrapper
+        a.page-header__link.page-header__link--phone.mobile-menu__phone(href="tel:+3292825725")
+          svg.page-header__phone
+            use(href="img/icons/sprite.svg#phone")
+          span.page-header__link-text +32 9 282 57 25
+        include ./social.pug
+    a.page-header__link.page-header__link--phone(href="tel:+3292825725")
       svg.page-header__phone
         use(href="img/icons/sprite.svg#phone")
-      span +32 9 282 57 25
+      span.page-header__link-text +32 9 282 57 25

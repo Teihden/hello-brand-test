@@ -5,10 +5,27 @@
 .page-header__navigation {
   display: flex;
   align-items: center;
+  gap: 30px;
+
+  @media (max-width: 1020px) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: 590px) {
+    gap: 15px;
+  }
+}
+
+.page-header__button {
+  position: relative;
+  z-index: 30;
+  flex-shrink: 0;
 }
 
 .page-header__logo-link {
-  margin: 0 135px 0 0;
+  width: 269px;
+  flex-shrink: 0;
+  margin: 0 auto 0 0;
   transition: opacity 0.3s ease-in-out;
 
   &:hover {
@@ -29,28 +46,43 @@
   &:active {
     opacity: 0.4;
   }
+
+  @media (max-width: 1020px) {
+    margin: 0;
+  }
+
+  @media (max-width: 590px) {
+    width: 200px;
+  }
 }
 
 .page-header__logo {
   vertical-align: middle;
 }
 
-.page-header__button {
-  display: none;
+.page-header__links {
+  max-width: 454px;
+  margin: 0 15px 0 0;
+
+  @media (max-width: 1020px) {
+    display: none;
+  }
 }
 
 .page-header__list {
-  min-width: 454px;
   display: flex;
   flex-wrap: wrap;
-  gap: 45px;
-  margin: 0 153px 0 0;
+  gap: 30px 45px;
 }
 
 .page-header__item {
   color: var(--white);
   font-size: 16px;
   line-height: 24px;
+}
+
+.page-header__wrapper {
+  display: none;
 }
 
 .page-header__link {
@@ -84,6 +116,60 @@
     color: var(--calico);
     opacity: 0.6;
   }
+
+  &--phone {
+    flex-shrink: 0;
+    margin: 0 5px 0 auto;
+
+    @media (max-width: 1020px) {
+      margin: 0;
+    }
+
+    @media (max-width: 590px) {
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--white);
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border-radius: 50%;
+
+      &:hover {
+        border-color: var(--calico);
+
+        .page-header__phone {
+          color: var(--calico);
+        }
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--calico);
+
+        .page-header__phone {
+          color: var(--calico);
+        }
+      }
+
+      &:focus-visible {
+        outline: none;
+        border-color: var(--calico);
+
+        .page-header__phone {
+          color: var(--calico);
+        }
+      }
+
+      &:active {
+        border-color: var(--calico);
+        opacity: 0.6;
+
+        .page-header__phone {
+          color: var(--calico);
+        }
+      }
+    }
+  }
 }
 
 .page-header__phone {
@@ -92,4 +178,15 @@
   margin: 0 11px 0 0;
   vertical-align: middle;
   color: var(--calico);
+
+  @media (max-width: 590px) {
+    color: var(--white);
+    margin: 0;
+  }
+}
+
+.page-header__link-text {
+  @media (max-width: 590px) {
+    display: none;
+  }
 }

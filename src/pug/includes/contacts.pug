@@ -1,7 +1,7 @@
 section.contacts
   .contacts__container.container
     .contacts__list-wrapper
-      h2.contacts__heading.contacts__heading--contacts Contacts
+      h2.contacts__heading.contacts__heading--contacts#contact Contacts
       ul.contacts__list
         li.contacts__item
           svg.contacts__icon
@@ -25,17 +25,17 @@ section.contacts
           .contacts__text Jl. Raya Surabaya 2787
     .contacts__form-wrapper
       p.contacts__heading.contacts__heading--questions have any questions?
-      form.contacts__form.form(action="" method="POST" autocomplete="off")
+      form.contacts__form.form#contacts-form(action="" method="POST" autocomplete="off")
         ul.form__list
           li.form__item.form__item--name
             label.form__label(for="contacts-name") Name
-            input.form__input#contacts-name(type="text" name="contacts_name" placeholder="Input your name")
+            input.form__input#contacts-name(type="text" name="contacts_name" data-label="name" placeholder="Input your name")
           li.form__item.form__item--email
             label.form__label(for="contacts-email") Email
-            input.form__input#contacts-email(type="email" name="contacts_email" placeholder="Input your email")
+            input.form__input#contacts-email(type="email" name="contacts_email" data-label="email" placeholder="Input your email")
           li.form__item.form__item--request
-            label.form__label(for="form-request") Speciale Request
-            textarea.form__input.form__input--textarea#form-request(name="contacts_request" placeholder="Input your special request")
+            label.form__label(for="contacts-request") Speciale Request
+            textarea.form__input.form__input--textarea#contacts-request(name="contacts_request" data-label="request" placeholder="Input your special request")
         button.form__submit.block-button(type="submit") Send
     .contacts__map-wrapper
       noscript

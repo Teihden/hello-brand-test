@@ -1,15 +1,28 @@
 .block-button {
   width: 270px;
   min-height: 100px;
-  padding: 38px 0;
+  padding: 38px 19px;
   background-color: var(--purple);
   text-align: center;
+  white-space: nowrap;
 
   color: var(--white);
   font-weight: 500;
   line-height: 24px;
 
   transition: background-color 0.3s ease-in-out;
+
+  @media (max-width: 1020px) {
+    width: 216px;
+    padding: 30px;
+    min-height: unset;
+  }
+
+  @media (max-width: 590px) {
+    width: 172px;
+    height: 64px;
+    padding: 15px;
+  }
 
   &:hover {
     outline: none;
@@ -33,6 +46,10 @@
 
 @keyframes pulse {
   from {
-    box-shadow: 0 0 8px 6px var(--purple), 0 0 12px 14px var(--purple); }
+    box-shadow: 0 0 8px 6px var(--purple), 0 0 12px 14px var(--purple);
+  }
+
   to {
-    box-shadow: 0 0 18px 6px color.adjust($purple, $alpha: -1), 0 0 4px 45px color.adjust($purple, $alpha: -1); } }
+    box-shadow: 0 0 18px 6px color.adjust($purple, $alpha: -1), 0 0 4px 45px color.adjust($purple, $alpha: -1);
+  }
+}
