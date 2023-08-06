@@ -5,32 +5,31 @@
 .feedback__container {
   position: relative;
   margin: 0 auto;
-  padding-block: 219px 137px;
+  padding: 219px 90px 137px;
+
+  display: flex;
 
   @media (max-width: 990px) {
     padding-block: 175px 110px;
   }
 
   @media (max-width: 700px) {
-    padding-block: 140px 88px;
+    padding: 140px 70px 88px;
   }
 }
 
 .feedback__button-container {
   position: absolute;
-  top: 351px;
   right: 30px;
   left: 30px;
   display: flex;
   justify-content: space-between;
+  top: 50%;
+  transform: translateY(-57%);
 
-  @media (max-width: 530px) {
-    top: unset;
-    right: 0;
-    left: 0;
-    width: 120px;
-    bottom: 90px;
-    margin: 0 auto;
+  @media (max-width: 1000px) {
+    right: 10px;
+    left: 10px;
   }
 }
 
@@ -40,12 +39,8 @@
   margin: 0 auto;
   text-align: center;
 
-  @media (max-width: 990px) {
-    max-width: 500px;
-  }
-
-  @media (max-width: 700px) {
-    max-width: 340px;
+  @media (max-width: 500px) {
+    max-width: 261px;
   }
 }
 
@@ -55,7 +50,8 @@
 
 .feedback__item {
   flex-shrink: 0;
-  width: 100%;
+  width: 100% !important;
+  overflow-wrap: anywhere;
 }
 
 .feedback__blockquote {

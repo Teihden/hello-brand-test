@@ -2,29 +2,29 @@ section.feedback
   .feedback__container.container
     h2.visually-hidden Feedback
     .feedback__button-container
-      button.feedback__button.feedback__button--prev.arrow-button.arrow-button--prev(type="button")
+      button.feedback__button.feedback__button--prev.arrow-button.arrow-button--prev#feedback-swiper-button-prev(type="button")
         svg.arrow-button__icon
           use(href="img/icons/sprite.svg#arrow")
-      button.feedback__button.feedback__button--next.arrow-button.arrow-button--next(type="button")
+      button.feedback__button.feedback__button--next.arrow-button.arrow-button--next#feedback-swiper-button-next(type="button")
         svg.arrow-button__icon
           use(href="img/icons/sprite.svg#arrow")
-    .feedback__slider-container
-      ol.feedback__list
-        li.feedback__item
+    .feedback__slider-container.swiper#feedback-swiper
+      ol.feedback__list.swiper-wrapper
+        li.feedback__item.swiper-slide
           blockquote.feedback__blockquote
             svg.feedback__quotation-marks
               use(href="img/icons/sprite.svg#quotation-marks")
             p.lead Goede service, lekker eten, toffe ambiance
             p.feedback__quote Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo  dolores et ea rebum. Stet clita kasd gubergren.
             footer.feedback__cite Alain Heyndrickx
-        li.feedback__item
+        li.feedback__item.swiper-slide
           blockquote.feedback__blockquote
             svg.feedback__quotation-marks
               use(href="img/icons/sprite.svg#quotation-marks")
             p.lead Ze bieden uitstekende service, heerlijk eten en een leuke sfeer.
             p.feedback__quote Sed ac nibh volutpat, sagittis dolor vel, consequat metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed eros elit, tempor fermentum nisi imperdiet, placerat rhoncus lorem. Proin suscipit mi nulla, sit amet tempus erat bibendum a. Donec vitae justo dui. Morbi in posuere nulla, id molestie ipsum.
             footer.feedback__cite Emma Theodore
-        li.feedback__item
+        li.feedback__item.swiper-slide
           blockquote.feedback__blockquote
             svg.feedback__quotation-marks
               use(href="img/icons/sprite.svg#quotation-marks")

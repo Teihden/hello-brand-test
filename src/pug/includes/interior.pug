@@ -5,23 +5,23 @@ section.interior
         h2.interior__heading Sfeerfoto's
         p.interior__text De beste manier om de sfeer te ervaren is eens langskomen. In tussentijd hebben we hier alvast wat foto’s voor je klaar.
       .interior__button-container
-        button.interior__button.interior__button--prev.arrow-button.arrow-button--prev(type="button")
+        button.interior__button.interior__button--prev.arrow-button.arrow-button--prev#interior-swiper-button-prev(type="button")
           svg.arrow-button__icon
             use(href="img/icons/sprite.svg#arrow")
-        button.interior__button.interior__button--next.arrow-button.arrow-button--next(type="button")
+        button.interior__button.interior__button--next.arrow-button.arrow-button--next#interior-swiper-button-next(type="button")
           svg.arrow-button__icon
             use(href="img/icons/sprite.svg#arrow")
-    .interior__slider-container
-      ol.interior__list
-        li.interior__item
+    .interior__slider-container.swiper#interior-swiper
+      ol.interior__list.swiper-wrapper
+        li.interior__item.swiper-slide
           picture.interior__picture
             source(type="image/webp" srcset="img/interior/interior-1@1x.webp 1x, img/interior/interior-1@2x.webp 2x" width="970" height="646")
             img.interior__photo(src="img/interior/interior-1@1x.jpg" srcset="img/interior/interior-1@2x.jpg" width="970" height="646" loading="lazy" alt="Interior-1.")
-        li.interior__item
+        li.interior__item.swiper-slide
           picture.interior__picture
             source(type="image/webp" srcset="img/interior/interior-2@1x.webp 1x, img/interior/interior-2@2x.webp 2x" width="970" height="646")
             img.interior__photo(src="img/interior/interior-2@1x.jpg" srcset="img/interior/interior-2@2x.jpg" width="970" height="646" loading="lazy" alt="Interior-2.")
-        li.interior__item
+        li.interior__item.swiper-slide
           picture.interior__picture
             source(type="image/webp" srcset="img/interior/interior-3@1x.webp 1x, img/interior/interior-3@2x.webp 2x" width="970" height="646")
             img.interior__photo(src="img/interior/interior-3@1x.jpg" srcset="img/interior/interior-3@2x.jpg" width="970" height="646" loading="lazy" alt="Interior-3.")

@@ -172,6 +172,12 @@ function copyMisc() {
     .pipe(browser.stream());
 }
 
+function copyVendor() {
+  return gulp.src(['src/vendor/**/*.min.{css,js,mjs,mjs.map}'])
+    .pipe(gulp.dest('build/vendor/'))
+    .pipe(browser.stream());
+}
+
 // Clean
 function clean() {
   return deleteAsync(['build']);
@@ -198,6 +204,7 @@ function watcher(cb) {
     'src/apple-touch-icon.png',
   ], copyImages);
   gulp.watch(['src/favicon.ico', 'src/manifest.webmanifest'], copyMisc);
+  gulp.watch(['src/vendor/**/*.min.{css,js,mjs}'], copyVendor);
   gulp.watch('src/fonts/**/*.{woff,woff2}', copyFonts);
   gulp.watch('src/js/**/*.js', gulp.series(lintJS, optimizeJS));
 
@@ -220,6 +227,7 @@ export const build = gulp.series(
     gulp.series(lintJS, optimizeJS),
     copyFonts,
     copyMisc,
+    copyVendor,
     optimizeImages,
     optimizeSVG,
     createWebp,
@@ -236,6 +244,7 @@ export default gulp.series(
     gulp.series(lintJS, optimizeJS),
     copyImages,
     copyFonts,
+    copyVendor,
     copyMisc,
     createWebp,
     makeSprite,
