@@ -1,7 +1,7 @@
 import { initMenu } from './modules/menu.js';
-
-const contactsForm = document.querySelector('#contacts-form');
+import { initModalForm } from './modules/modal-form.js';
+import { initForms } from './modules/form.js';
 
 initMenu();
-
-contactsForm.addEventListener('submit', (evt) => evt.preventDefault());
+initModalForm();
+initForms();

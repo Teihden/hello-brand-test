@@ -7,9 +7,18 @@
   min-width: var(--min-container-width);
   max-height: 90vh;
   padding: 30px;
-  transition: color 0.3s ease-in-out;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out 0.3s;
   cursor: default;
-  will-change: color;
+  will-change: background-color;
+
+  &--success {
+    box-shadow: var(--message-success-shadow);
+  }
+
+  &--failure {
+    box-shadow: var(--message-failure-shadow);
+  }
 }
 
 .modal-message__text {
@@ -20,12 +29,21 @@
   line-height: 36px;
   text-align: center;
   height: 100%;
-  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.6s;
   will-change: opacity;
 
   @media (max-width: 700px) {
     font-size: 28px;
     line-height: 32px;
+  }
+
+  &--success {
+    color: var(--calico);
+  }
+
+  &--failure {
+    color: var(--white);
   }
 }
 
@@ -46,27 +64,17 @@
     pointer-events: auto;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
-  }
 
-  &--success {
-    .modal-message__inner {
+    .modal-message__inner--success {
       background-color: var(--purple);
-      box-shadow: var(--message-success-shadow);
     }
 
-    .modal-message__text {
-      color: var(--calico);
-    }
-  }
-
-  &--failure {
-    .modal-message__inner {
+    .modal-message__inner--failure {
       background-color: var(--calico);
-      box-shadow: var(--message-failure-shadow);
     }
 
     .modal-message__text {
-      color: var(--white);
+      opacity: 1;
     }
   }
 }

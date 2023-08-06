@@ -1,10 +1,10 @@
-section.modal-form
-  .modal-form__inner
+section.modal-form#modal-form
+  .modal-form__inner(data-label="modal-inner")
     h2.modal-form__heading Reserve a table
-    button.modal-form__close-button#modal-form-close-button(type="reset" aria-label="Close the form window.")
+    button.modal-form__close-button(type="reset" data-label="close-modal-form-button" aria-label="Close the form window.")
       svg.modal-form__cross
         use(href="img/icons/sprite.svg#cross")
-    form.modal-form__form.form#modal-form(action="https://httpbin.org/post" method="POST" autocomplete="off")
+    form.modal-form__form.form#modal-form(action="https://httpbin.org/post" method="POST" autocomplete="off" data-label="form")
       ul.form__list.modal-form__list
         li.form__item.form__item--name.modal-form__item.modal-form__item--name
           label.form__label(for="modal-form-name") Full Name
@@ -16,7 +16,7 @@ section.modal-form
           label.form__label(for="modal-form-email") Email
           input.form__input#modal-form-email(type="email" name="modal_form_email" data-label="email" placeholder="Input your email")
         li.form__item.form__item--date.modal-form__item.modal-form__item--date
-          label.form__label(for="modal-form-booking") Date of booking
+          label.form__label(for="modal-form-date") Date of booking
           input.form__input#modal-form-date(type="date" name="modal_form_date" value="2023-08-05" data-label="date")
         li.form__item.form__item--guest.modal-form__item.modal-form__item--guest
           label.form__label(for="modal-form-guest") Guest numbers
@@ -24,4 +24,4 @@ section.modal-form
         li.form__item.form__item--request.modal-form__item.modal-form__item--request
           label.form__label(for="modal-form-request") Special Request
           textarea.form__input.form__input--textarea#modal-form-request(name="modal-form_request" data-label="request" placeholder="Input your special request")
-      button.form__submit.block-button(type="submit") Send
+      button.form__submit.block-button(type="submit" data-label="submit-button") Send

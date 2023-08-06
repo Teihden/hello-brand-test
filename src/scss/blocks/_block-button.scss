@@ -42,6 +42,13 @@
     background-color: var(--purple);
     color: color.adjust($white, $alpha: -0.6);
   }
+
+  &:disabled {
+    opacity: 0.4;
+    background-color: var(--purple);
+    animation: none;
+    cursor: not-allowed;
+  }
 }
 
 @keyframes pulse {
