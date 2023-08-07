@@ -189,7 +189,7 @@ function browsersync() {
     server: {
       baseDir: 'build',
     },
-    cors: true,
+    // cors: true,
     notify: false,
     open: false,
   });

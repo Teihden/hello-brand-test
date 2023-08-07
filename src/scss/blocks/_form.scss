@@ -92,6 +92,18 @@
     resize: none;
     min-height: 125px;
   }
+
+  &--date {
+    appearance: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+
+    // &::-webkit-date-and-time-value {
+    //   text-align: left;
+    // }
+  }
 }
 
 .form__submit {

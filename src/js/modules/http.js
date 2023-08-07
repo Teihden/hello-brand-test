@@ -1,8 +1,11 @@
 /* eslint-disable implicit-arrow-linebreak */
-const URL = () => 'https://httpbin.org/post';
+const url = {
+  httpbin: () => 'https://httpbin.org/post',
+  webhook: () => 'https://webhook.site/c26d9ccf-9437-410a-91c2-a3738e4c9398',
+};
 
 const sendData = (onSuccessRequestSend, onFailureRequestSend, body) =>
-  fetch(URL(), { method: 'POST', body })
+  fetch(url.webhook(), { method: 'POST', body })
     .then((response) => {
       const { ok } = response;
 
