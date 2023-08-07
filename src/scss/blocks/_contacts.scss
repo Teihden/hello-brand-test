@@ -1,8 +1,8 @@
 .contacts__container {
   margin: 102px auto 40px;
   display: grid;
-  grid-template-columns: max-content minmax(auto, 1fr);
-  gap: 50px 103px;
+  grid-template-columns: minmax(auto, 400px) minmax(auto, 1fr);
+  gap: 50px 100px;
 
   @media (max-width: 990px) {
     margin: 81px 0 40px;
@@ -22,7 +22,6 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 88px;
-  white-space: nowrap;
 
   @media (max-width: 1050px) {
     font-size: 38px;
@@ -52,7 +51,6 @@
 }
 
 .contacts__list {
-  white-space: nowrap;
   display: flex;
   flex-direction: column;
   row-gap: 40px;

@@ -4,7 +4,6 @@
   padding: 38px 19px;
   background-color: var(--purple);
   text-align: center;
-  white-space: nowrap;
 
   color: var(--white);
   font-weight: 500;
@@ -15,12 +14,11 @@
   @media (max-width: 1020px) {
     width: 216px;
     padding: 30px;
-    min-height: unset;
+    min-height: 64px;
   }
 
   @media (max-width: 590px) {
     width: 172px;
-    height: 64px;
     padding: 15px;
   }
 

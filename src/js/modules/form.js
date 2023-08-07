@@ -17,7 +17,7 @@ const switchSubmitButtonState = (state, text, submitButton) => {
 };
 
 const onSuccessRequestSend = (form) => {
-  if (form.id === 'modal-form') {
+  if (form.id === 'modal-form_form') {
     closeModalForm();
   }
   form.reset();

@@ -1,7 +1,7 @@
 .social__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 25px;
+  gap: 25px;
   max-width: 534px;
 }
 

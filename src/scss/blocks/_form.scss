@@ -15,11 +15,19 @@
   grid-column: 1 / 2;
   max-width: 320px;
   margin: 0 10px 0 0;
+
+  @media (max-width: 910px) {
+    max-width: unset;
+  }
 }
 
 .form__item--email {
   grid-column: 2 / 3;
   max-width: 320px;
+
+  @media (max-width: 910px) {
+    max-width: unset;
+  }
 }
 
 .form__item--request {
@@ -71,11 +79,11 @@
 
   &:disabled {
     opacity: 0.5;
-    color: var($whisper);
+    color: var(--whisper);
 
     &:hover {
       outline: none;
-      color: var($whisper);
+      color: var(--whisper);
     }
   }
 
@@ -91,18 +99,6 @@
     margin: 0;
     resize: none;
     min-height: 125px;
-  }
-
-  &--date {
-    appearance: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-
-    // &::-webkit-date-and-time-value {
-    //   text-align: left;
-    // }
   }
 }
 
