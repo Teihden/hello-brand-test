@@ -11,8 +11,8 @@ const initSwiper = () => {
       enabled: true,
     },
     navigation: {
-      nextEl: '#feedback-swiper-button-prev',
-      prevEl: '#feedback-swiper-button-next',
+      nextEl: '#feedback-swiper-button-next',
+      prevEl: '#feedback-swiper-button-prev',
     },
   });
 
@@ -32,8 +32,8 @@ const initSwiper = () => {
     updateOnWindowResize: true,
     resizeObserver: true,
     navigation: {
-      nextEl: '#interior-swiper-button-prev',
-      prevEl: '#interior-swiper-button-next',
+      nextEl: '#interior-swiper-button-next',
+      prevEl: '#interior-swiper-button-prev',
     },
   });
 };
